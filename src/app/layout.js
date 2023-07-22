@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import './styles.css';
+import "./styles.css";
 
 function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
+	const timestamp = new Date().toLocaleString();
 
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body>
+				{children}
+				<footer>Page rendered on {timestamp}</footer>
+			</body>
+		</html>
+	);
 }
 
 export default RootLayout;
